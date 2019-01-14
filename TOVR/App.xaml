@@ -1,0 +1,10 @@
+﻿<Application x:Class="TOVR.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TOVR"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <BitmapImage x:Key="Open" UriSource="./resource/Open.png"/>
+        <BitmapImage x:Key="Save" UriSource="./resource/Save.png"/>
+    </Application.Resources>
+</Application>
