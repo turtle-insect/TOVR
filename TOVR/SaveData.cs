@@ -98,9 +98,23 @@ namespace TOVR
 
 		public bool SaveAs(String filename)
 		{
-			if (mBuffer == null) return false;
+			if (mFileName == null || mBuffer == null || mHeader == null || mLZMAProp == null) return false;
 			mFileName = filename;
 			return Save();
+		}
+
+		public bool Export(String filename)
+		{
+			if (mFileName == null || mBuffer == null || mHeader == null || mLZMAProp == null) return false;
+			System.IO.File.WriteAllBytes(filename, mBuffer);
+			return true;
+		}
+
+		public bool Import(String filename)
+		{
+			if (mFileName == null || mBuffer == null || mHeader == null || mLZMAProp == null) return false;
+			mBuffer = System.IO.File.ReadAllBytes(filename);
+			return true;
 		}
 
 		public uint ReadNumber(uint address, uint size)

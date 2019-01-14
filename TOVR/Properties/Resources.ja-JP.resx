@@ -129,6 +129,12 @@
   <data name="MenuFile" xml:space="preserve">
     <value>ファイル(_F)</value>
   </data>
+  <data name="MenuFileExport" xml:space="preserve">
+    <value>生データを保存...</value>
+  </data>
+  <data name="MenuFileImport" xml:space="preserve">
+    <value>生データを読込...</value>
+  </data>
   <data name="MenuFileOpen" xml:space="preserve">
     <value>開く(_O)...</value>
   </data>
@@ -152,6 +158,9 @@
   </data>
   <data name="TabItemBasic" xml:space="preserve">
     <value>基本</value>
+  </data>
+  <data name="TabItemCharactor" xml:space="preserve">
+    <value>人物</value>
   </data>
   <data name="ToolTipOpen" xml:space="preserve">
     <value>開く</value>

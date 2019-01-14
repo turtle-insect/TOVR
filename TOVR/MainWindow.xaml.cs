@@ -62,6 +62,25 @@ namespace TOVR
 			else MessageBox.Show(Properties.Resources.MessageSaveFail);
 		}
 
+		private void MenuItemFileExport_Click(object sender, RoutedEventArgs e)
+		{
+			SaveFileDialog dlg = new SaveFileDialog();
+			if (dlg.ShowDialog() == false) return;
+
+			if (SaveData.Instance().Export(dlg.FileName) == true) MessageBox.Show(Properties.Resources.MessageSaveSuccess);
+			else MessageBox.Show(Properties.Resources.MessageSaveFail);
+		}
+
+		private void MenuItemFileImport_Click(object sender, RoutedEventArgs e)
+		{
+			OpenFileDialog dlg = new OpenFileDialog();
+			if (dlg.ShowDialog() == false) return;
+
+			if (SaveData.Instance().Import(dlg.FileName) == true) MessageBox.Show(Properties.Resources.MessageLoadSuccess);
+			else MessageBox.Show(Properties.Resources.MessageLoadFail);
+		}
+
+
 		private void MenuItemExit_Click(object sender, RoutedEventArgs e)
 		{
 			Close();
@@ -82,11 +101,6 @@ namespace TOVR
 			Save();
 		}
 
-		private void Init()
-		{
-			DataContext = new DataContext();
-		}
-
 		private void Load(String filename)
 		{
 			if (SaveData.Instance().Open(filename) == false)
@@ -94,7 +108,7 @@ namespace TOVR
 				MessageBox.Show(Properties.Resources.MessageLoadFail);
 			}
 
-			Init();
+			(DataContext as DataContext)?.Init();
 			MessageBox.Show(Properties.Resources.MessageLoadSuccess);
 		}
 

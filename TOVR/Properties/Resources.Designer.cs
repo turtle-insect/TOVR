@@ -97,6 +97,24 @@ namespace TOVR.Properties {
         }
         
         /// <summary>
+        ///   Export... に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string MenuFileExport {
+            get {
+                return ResourceManager.GetString("MenuFileExport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Import... に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string MenuFileImport {
+            get {
+                return ResourceManager.GetString("MenuFileImport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   (_O)pen... に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string MenuFileOpen {
@@ -165,6 +183,15 @@ namespace TOVR.Properties {
         public static string TabItemBasic {
             get {
                 return ResourceManager.GetString("TabItemBasic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Charactor に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string TabItemCharactor {
+            get {
+                return ResourceManager.GetString("TabItemCharactor", resourceCulture);
             }
         }
         

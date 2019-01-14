@@ -6,9 +6,12 @@
         xmlns:local="clr-namespace:TOVR"
         xmlns:properties="clr-namespace:TOVR.Properties"
         mc:Ignorable="d"
-        Title="{x:Static properties:Resources.MainWindowTitle}" Height="550" Width="800"
+        Title="{x:Static properties:Resources.MainWindowTitle}" Height="500" Width="700"
         WindowStartupLocation="CenterScreen"
         AllowDrop="True" Drop="Window_Drop" PreviewDragOver="Window_PreviewDragOver">
+    <Window.DataContext>
+        <local:DataContext/>
+    </Window.DataContext>
     <Grid>
         <DockPanel>
             <Menu DockPanel.Dock="Top">
@@ -16,6 +19,9 @@
                     <MenuItem Header="{x:Static properties:Resources.MenuFileOpen}" Click="MenuItemFileOpen_Click"/>
                     <MenuItem Header="{x:Static properties:Resources.MenuFileSave}" Click="MenuItemFileSave_Click"/>
                     <MenuItem Header="{x:Static properties:Resources.MenuFileSaveAs}" Click="MenuItemFileSaveAs_Click"/>
+                    <Separator/>
+                    <MenuItem Header="{x:Static properties:Resources.MenuFileExport}" Click="MenuItemFileExport_Click"/>
+                    <MenuItem Header="{x:Static properties:Resources.MenuFileImport}" Click="MenuItemFileImport_Click"/>
                     <Separator/>
                     <MenuItem Header="{x:Static properties:Resources.MenuExit}" Click="MenuItemExit_Click"/>
                 </MenuItem>
@@ -34,7 +40,7 @@
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition/>
-                            <RowDefinition Height="16*"/>
+                            <RowDefinition Height="14*"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
@@ -45,6 +51,40 @@
                         </Grid.ColumnDefinitions>
                         <Label Content="GALD"/>
                         <TextBox Grid.Column="1" Text="{Binding GALD, UpdateSourceTrigger=PropertyChanged}"/>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="{x:Static properties:Resources.TabItemCharactor}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <ListBox Name="ListBoxParty" ItemsSource="{Binding Party}" DisplayMemberPath="Name"/>
+                        <Grid Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition Height="10*"/>
+                            </Grid.RowDefinitions>
+                            <Label Content="Lv"/>
+                            <TextBox Grid.Column="1" Text="{Binding ElementName=ListBoxParty, Path=SelectedItem.Lv, UpdateSourceTrigger=PropertyChanged}"/>
+                            <Label Grid.Row="1" Content="HP"/>
+                            <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding ElementName=ListBoxParty, Path=SelectedItem.HP, UpdateSourceTrigger=PropertyChanged}"/>
+                            <Label Grid.Row="2" Content="MaxHP"/>
+                            <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding ElementName=ListBoxParty, Path=SelectedItem.MaxHP, UpdateSourceTrigger=PropertyChanged}"/>
+                            <Label Grid.Row="3" Content="TP"/>
+                            <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding ElementName=ListBoxParty, Path=SelectedItem.TP, UpdateSourceTrigger=PropertyChanged}"/>
+                            <Label Grid.Row="4" Content="MaxTP"/>
+                            <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding ElementName=ListBoxParty, Path=SelectedItem.MaxTP, UpdateSourceTrigger=PropertyChanged}"/>
+                        </Grid>
                     </Grid>
                 </TabItem>
             </TabControl>

@@ -58,6 +58,7 @@
     <Compile Include="AboutWindow.xaml.cs">
       <DependentUpon>AboutWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Charactor.cs" />
     <Compile Include="DataContext.cs" />
     <Compile Include="SaveData.cs" />
     <Compile Include="Util.cs" />

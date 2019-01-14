@@ -129,6 +129,12 @@
   <data name="MenuFile" xml:space="preserve">
     <value>(_F)ile</value>
   </data>
+  <data name="MenuFileExport" xml:space="preserve">
+    <value>Export...</value>
+  </data>
+  <data name="MenuFileImport" xml:space="preserve">
+    <value>Import...</value>
+  </data>
   <data name="MenuFileOpen" xml:space="preserve">
     <value>(_O)pen...</value>
   </data>
@@ -152,6 +158,9 @@
   </data>
   <data name="TabItemBasic" xml:space="preserve">
     <value>Basic</value>
+  </data>
+  <data name="TabItemCharactor" xml:space="preserve">
+    <value>Charactor</value>
   </data>
   <data name="ToolTipOpen" xml:space="preserve">
     <value>Open</value>
