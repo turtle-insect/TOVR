@@ -162,6 +162,9 @@
   <data name="TabItemCharactor" xml:space="preserve">
     <value>人物</value>
   </data>
+  <data name="TabItemItem" xml:space="preserve">
+    <value>アイテム</value>
+  </data>
   <data name="ToolTipOpen" xml:space="preserve">
     <value>開く</value>
   </data>

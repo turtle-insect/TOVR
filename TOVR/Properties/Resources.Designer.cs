@@ -196,6 +196,15 @@ namespace TOVR.Properties {
         }
         
         /// <summary>
+        ///   Item に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string TabItemItem {
+            get {
+                return ResourceManager.GetString("TabItemItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Open に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ToolTipOpen {

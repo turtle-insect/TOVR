@@ -87,6 +87,19 @@
                         </Grid>
                     </Grid>
                 </TabItem>
+                <TabItem Header="{x:Static properties:Resources.TabItemItem}">
+                    <ListBox ItemsSource="{Binding Items}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="Count :"/>
+                                    <TextBox Text="{Binding Count, UpdateSourceTrigger=PropertyChanged}" Width="30"/>
+                                    <Label Content="{Binding Name}" Margin="3"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </TabItem>
             </TabControl>
         </DockPanel>
     </Grid>

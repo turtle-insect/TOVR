@@ -11,13 +11,21 @@ namespace TOVR
 	class DataContext : INotifyPropertyChanged
 	{
 		public ObservableCollection<Charactor> Party { get; set; } = new ObservableCollection<Charactor>();
+		public ObservableCollection<Item> Items { get; set; } = new ObservableCollection<Item>();
 
 		public void Init()
 		{
 			Party.Clear();
+			Items.Clear();
+
 			Party.Add(new Charactor(0xA8750) { Name = "ユーリ" });
 			Party.Add(new Charactor(0xAC760) { Name = "エステル" });
 			Party.Add(new Charactor(0xC07B0) { Name = "ラピッド" });
+
+			foreach (var info in Info.Instance().Items)
+			{
+				Items.Add(new Item(info));
+			}
 
 			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(GALD)));
 		}

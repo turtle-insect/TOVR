@@ -162,6 +162,9 @@
   <data name="TabItemCharactor" xml:space="preserve">
     <value>Charactor</value>
   </data>
+  <data name="TabItemItem" xml:space="preserve">
+    <value>Item</value>
+  </data>
   <data name="ToolTipOpen" xml:space="preserve">
     <value>Open</value>
   </data>

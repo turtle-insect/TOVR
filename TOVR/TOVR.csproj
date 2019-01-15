@@ -60,6 +60,14 @@
     </Compile>
     <Compile Include="Charactor.cs" />
     <Compile Include="DataContext.cs" />
+    <Compile Include="FileFormatPC.cs" />
+    <Compile Include="FileFormatRaw.cs" />
+    <Compile Include="FileFormatSwitch.cs" />
+    <Compile Include="IFileFormat.cs" />
+    <Compile Include="ILineAnalysis.cs" />
+    <Compile Include="Info.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="NameValueInfo.cs" />
     <Compile Include="SaveData.cs" />
     <Compile Include="Util.cs" />
     <Page Include="AboutWindow.xaml">
