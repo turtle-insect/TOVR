@@ -19,7 +19,7 @@ namespace TOVR
 		public uint Lv
 		{
 			get { return SaveData.Instance().ReadNumber(mAddress + 8, 4); }
-			set { Util.WriteNumber(mAddress + 8, 4, value, 1, 150); }
+			set { Util.WriteNumber(mAddress + 8, 4, value, 1, 200); }
 		}
 
 		public uint HP
@@ -31,7 +31,7 @@ namespace TOVR
 		public uint TP
 		{
 			get { return SaveData.Instance().ReadNumber(mAddress + 16, 4); }
-			set { Util.WriteNumber(mAddress + 16, 4, value, 0, 9999); }
+			set { Util.WriteNumber(mAddress + 16, 4, value, 0, 999); }
 		}
 
 		public uint MaxHP
@@ -43,7 +43,19 @@ namespace TOVR
 		public uint MaxTP
 		{
 			get { return SaveData.Instance().ReadNumber(mAddress + 24, 4); }
-			set { Util.WriteNumber(mAddress + 24, 4, value, 0, 9999); }
+			set { Util.WriteNumber(mAddress + 24, 4, value, 0, 999); }
+		}
+
+		public uint SP
+		{
+			get { return SaveData.Instance().ReadNumber(mAddress + 9400, 4); }
+			set { Util.WriteNumber(mAddress + 9400, 4, value, 0, 999); }
+		}
+
+		public uint MaxSP
+		{
+			get { return SaveData.Instance().ReadNumber(mAddress + 9404, 4); }
+			set { Util.WriteNumber(mAddress + 9404, 4, value, 0, 999); }
 		}
 
 		private readonly uint mAddress;

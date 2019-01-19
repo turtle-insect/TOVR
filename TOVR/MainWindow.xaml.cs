@@ -106,6 +106,7 @@ namespace TOVR
 			if (SaveData.Instance().Open(filename) == false)
 			{
 				MessageBox.Show(Properties.Resources.MessageLoadFail);
+				return;
 			}
 
 			(DataContext as DataContext)?.Init();

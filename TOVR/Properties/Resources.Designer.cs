@@ -205,6 +205,15 @@ namespace TOVR.Properties {
         }
         
         /// <summary>
+        ///   Party に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string TabItemParty {
+            get {
+                return ResourceManager.GetString("TabItemParty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Open に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ToolTipOpen {

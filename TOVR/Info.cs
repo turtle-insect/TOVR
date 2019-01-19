@@ -7,6 +7,7 @@ namespace TOVR
 	{
 		private static Info mThis;
 		public List<NameValueInfo> Items { get; private set; } = new List<NameValueInfo>();
+		public List<NameValueInfo> Member { get; private set; } = new List<NameValueInfo>();
 
 		private Info() { }
 
@@ -38,6 +39,7 @@ namespace TOVR
 		private void Init()
 		{
 			AppendList("info\\item.txt", Items);
+			AppendList("info\\member.txt", Member);
 		}
 
 		private void AppendList<Type>(String filename, List<Type> items)
