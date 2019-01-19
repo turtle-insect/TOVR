@@ -14,10 +14,10 @@ namespace TOVR
 
 		public ObservableCollection<Charactor> Charactors { get; set; } = new ObservableCollection<Charactor>();
 		public ObservableCollection<Item> Items { get; set; } = new ObservableCollection<Item>();
-		public ObservableCollection<SaveDataValue> Party { get; set; } = new ObservableCollection<SaveDataValue>();
+		public ObservableCollection<SaveDataValue<uint>> Party { get; set; } = new ObservableCollection<SaveDataValue<uint>>();
 
-		public SaveDataValue GALD { get; set; } = new SaveDataValue(0xA3D60, 4, 0, 99999999);
-		public SaveDataValue GRADE { get; set; } = new SaveDataValue(0xA7718, 4, 0, 99999999);
+		public SaveDataValue<long> GALD { get; set; } = new SaveDataValue<long>(0xA3D60, 4, 0, 999999999);
+		public SaveDataValue<long> GRADE { get; set; } = new SaveDataValue<long>(0xA7718, 4, 0, 999999999);
 
 		public void Init()
 		{
@@ -38,7 +38,7 @@ namespace TOVR
 
 			for(uint i = 0; i < 9; i++)
 			{
-				Party.Add(new SaveDataValue(0xA3D38 + 4 * i, 4, 0, 9));
+				Party.Add(new SaveDataValue<uint>(0xA3D38 + 4 * i, 4, 0, 9));
 			}
 
 			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(GALD)));

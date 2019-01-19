@@ -46,16 +46,58 @@ namespace TOVR
 			set { Util.WriteNumber(mAddress + 24, 4, value, 0, 999); }
 		}
 
+		public uint Exp
+		{
+			get { return SaveData.Instance().ReadNumber(mAddress + 32, 4); }
+			set { Util.WriteNumber(mAddress + 32, 4, value, 0, 99999999); }
+		}
+
+		public uint PhysicsAttack
+		{
+			get { return SaveData.Instance().ReadNumber(mAddress + 248, 4); }
+			set { Util.WriteNumber(mAddress + 248, 4, value, 0, 9999); }
+		}
+
+		public uint MagicAttack
+		{
+			get { return SaveData.Instance().ReadNumber(mAddress + 252, 4); }
+			set { Util.WriteNumber(mAddress + 252, 4, value, 0, 9999); }
+		}
+
+		public uint PhysicsDefense
+		{
+			get { return SaveData.Instance().ReadNumber(mAddress + 256, 4); }
+			set { Util.WriteNumber(mAddress + 256, 4, value, 0, 9999); }
+		}
+
+		public uint MagicDefense
+		{
+			get { return SaveData.Instance().ReadNumber(mAddress + 260, 4); }
+			set { Util.WriteNumber(mAddress + 260, 4, value, 0, 9999); }
+		}
+
+		public uint Speed
+		{
+			get { return SaveData.Instance().ReadNumber(mAddress + 268, 4); }
+			set { Util.WriteNumber(mAddress + 268, 4, value, 0, 9999); }
+		}
+
+		public uint Lucky
+		{
+			get { return SaveData.Instance().ReadNumber(mAddress + 272, 4); }
+			set { Util.WriteNumber(mAddress + 272, 4, value, 0, 9999); }
+		}
+
 		public uint SP
 		{
 			get { return SaveData.Instance().ReadNumber(mAddress + 9400, 4); }
-			set { Util.WriteNumber(mAddress + 9400, 4, value, 0, 999); }
+			set { Util.WriteNumber(mAddress + 9400, 4, value, 0, 500); }
 		}
 
 		public uint MaxSP
 		{
 			get { return SaveData.Instance().ReadNumber(mAddress + 9404, 4); }
-			set { Util.WriteNumber(mAddress + 9404, 4, value, 0, 999); }
+			set { Util.WriteNumber(mAddress + 9404, 4, value, 0, 500); }
 		}
 
 		private readonly uint mAddress;

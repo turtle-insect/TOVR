@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TOVR
 {
-	class SaveDataValue
+	class SaveDataValue<T>
+		where T : struct
 	{
 		public SaveDataValue(uint address, uint size)
 		{
