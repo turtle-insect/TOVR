@@ -8,9 +8,10 @@ namespace TOVR
 {
 	class Item
 	{
-		public Item(NameValueInfo info)
+		public Item(NameValueInfo info, uint address)
 		{
 			mInfo = info;
+			mAddress = address;
 		}
 
 		public String Name
@@ -20,10 +21,11 @@ namespace TOVR
 
 		public uint Count
 		{
-			get { return SaveData.Instance().ReadNumber(0xA3D6C + mInfo.Value * 4, 4); }
-			set { Util.WriteNumber(0xA3D6C + mInfo.Value * 4, 4, value, 0, 99); }
+			get { return SaveData.Instance().ReadNumber(mAddress + mInfo.Value * 4, 4); }
+			set { Util.WriteNumber(mAddress + mInfo.Value * 4, 4, value, 0, 99); }
 		}
 
-		private NameValueInfo mInfo;
+		private readonly NameValueInfo mInfo;
+		private readonly uint mAddress;
 	}
 }

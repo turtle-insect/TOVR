@@ -165,6 +165,9 @@
   <data name="TabItemItem" xml:space="preserve">
     <value>アイテム</value>
   </data>
+  <data name="TabItemItemTool" xml:space="preserve">
+    <value>道具</value>
+  </data>
   <data name="TabItemParty" xml:space="preserve">
     <value>パーティー</value>
   </data>

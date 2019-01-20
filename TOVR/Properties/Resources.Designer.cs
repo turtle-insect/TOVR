@@ -205,6 +205,15 @@ namespace TOVR.Properties {
         }
         
         /// <summary>
+        ///   Tool に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string TabItemItemTool {
+            get {
+                return ResourceManager.GetString("TabItemItemTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Party に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string TabItemParty {
