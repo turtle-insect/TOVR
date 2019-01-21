@@ -60,6 +60,7 @@
     </Compile>
     <Compile Include="Charactor.cs" />
     <Compile Include="DataContext.cs" />
+    <Compile Include="EquipmentConverter.cs" />
     <Compile Include="FileFormatPC.cs" />
     <Compile Include="FileFormatRaw.cs" />
     <Compile Include="FileFormatSwitch.cs" />

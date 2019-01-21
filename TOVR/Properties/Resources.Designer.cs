@@ -196,11 +196,29 @@ namespace TOVR.Properties {
         }
         
         /// <summary>
+        ///   Equipment に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string TabItemCharactorEquipment {
+            get {
+                return ResourceManager.GetString("TabItemCharactorEquipment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Item に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string TabItemItem {
             get {
                 return ResourceManager.GetString("TabItemItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Main に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string TabItemItemMain {
+            get {
+                return ResourceManager.GetString("TabItemItemMain", resourceCulture);
             }
         }
         

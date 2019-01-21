@@ -100,6 +100,12 @@ namespace TOVR
 			set { Util.WriteNumber(mAddress + 9404, 4, value, 0, 500); }
 		}
 
+		public uint EquipmentMain
+		{
+			get { return SaveData.Instance().ReadNumber(mAddress + 9368, 4); }
+			set { SaveData.Instance().WriteNumber(mAddress + 9368, 4, value); }
+		}
+
 		private readonly uint mAddress;
 	}
 }

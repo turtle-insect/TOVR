@@ -162,8 +162,14 @@
   <data name="TabItemCharactor" xml:space="preserve">
     <value>Charactor</value>
   </data>
+  <data name="TabItemCharactorEquipment" xml:space="preserve">
+    <value>Equipment</value>
+  </data>
   <data name="TabItemItem" xml:space="preserve">
     <value>Item</value>
+  </data>
+  <data name="TabItemItemMain" xml:space="preserve">
+    <value>Main</value>
   </data>
   <data name="TabItemItemTool" xml:space="preserve">
     <value>Tool</value>

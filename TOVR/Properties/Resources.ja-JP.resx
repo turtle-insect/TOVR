@@ -162,8 +162,14 @@
   <data name="TabItemCharactor" xml:space="preserve">
     <value>人物</value>
   </data>
+  <data name="TabItemCharactorEquipment" xml:space="preserve">
+    <value>装備</value>
+  </data>
   <data name="TabItemItem" xml:space="preserve">
     <value>アイテム</value>
+  </data>
+  <data name="TabItemItemMain" xml:space="preserve">
+    <value>メイン</value>
   </data>
   <data name="TabItemItemTool" xml:space="preserve">
     <value>道具</value>
