@@ -168,8 +168,20 @@
   <data name="TabItemItem" xml:space="preserve">
     <value>Item</value>
   </data>
+  <data name="TabItemItemAccessory" xml:space="preserve">
+    <value>Accessory</value>
+  </data>
+  <data name="TabItemItemBody" xml:space="preserve">
+    <value>Body</value>
+  </data>
+  <data name="TabItemItemHead" xml:space="preserve">
+    <value>Head</value>
+  </data>
   <data name="TabItemItemMain" xml:space="preserve">
     <value>Main</value>
+  </data>
+  <data name="TabItemItemSub" xml:space="preserve">
+    <value>Sub</value>
   </data>
   <data name="TabItemItemTool" xml:space="preserve">
     <value>Tool</value>

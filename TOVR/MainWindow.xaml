@@ -166,7 +166,7 @@
                 <TabItem Header="{x:Static properties:Resources.TabItemItem}">
                     <TabControl>
                         <TabItem Header="{x:Static properties:Resources.TabItemItemTool}">
-                            <ListBox ItemsSource="{Binding Items}">
+                            <ListBox ItemsSource="{Binding Tools}">
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
                                         <StackPanel Orientation="Horizontal">
@@ -180,6 +180,58 @@
                         </TabItem>
                         <TabItem Header="{x:Static properties:Resources.TabItemItemMain}">
                             <ListBox ItemsSource="{Binding Mains}">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Label Content="Count :"/>
+                                            <TextBox Text="{Binding Count, UpdateSourceTrigger=PropertyChanged}" Width="30"/>
+                                            <Label Content="{Binding Name}" Margin="3"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </TabItem>
+                        <TabItem Header="{x:Static properties:Resources.TabItemItemSub}">
+                            <ListBox ItemsSource="{Binding Subs}">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Label Content="Count :"/>
+                                            <TextBox Text="{Binding Count, UpdateSourceTrigger=PropertyChanged}" Width="30"/>
+                                            <Label Content="{Binding Name}" Margin="3"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </TabItem>
+                        <TabItem Header="{x:Static properties:Resources.TabItemItemHead}">
+                            <ListBox ItemsSource="{Binding Heads}">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Label Content="Count :"/>
+                                            <TextBox Text="{Binding Count, UpdateSourceTrigger=PropertyChanged}" Width="30"/>
+                                            <Label Content="{Binding Name}" Margin="3"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </TabItem>
+                        <TabItem Header="{x:Static properties:Resources.TabItemItemBody}">
+                            <ListBox ItemsSource="{Binding Bodys}">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Label Content="Count :"/>
+                                            <TextBox Text="{Binding Count, UpdateSourceTrigger=PropertyChanged}" Width="30"/>
+                                            <Label Content="{Binding Name}" Margin="3"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </TabItem>
+                        <TabItem Header="{x:Static properties:Resources.TabItemItemAccessory}">
+                            <ListBox ItemsSource="{Binding Accessorys}">
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
                                         <StackPanel Orientation="Horizontal">

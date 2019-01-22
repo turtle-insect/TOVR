@@ -168,8 +168,20 @@
   <data name="TabItemItem" xml:space="preserve">
     <value>アイテム</value>
   </data>
+  <data name="TabItemItemAccessory" xml:space="preserve">
+    <value>アクセサリ</value>
+  </data>
+  <data name="TabItemItemBody" xml:space="preserve">
+    <value>体</value>
+  </data>
+  <data name="TabItemItemHead" xml:space="preserve">
+    <value>頭</value>
+  </data>
   <data name="TabItemItemMain" xml:space="preserve">
     <value>メイン</value>
+  </data>
+  <data name="TabItemItemSub" xml:space="preserve">
+    <value>サブ</value>
   </data>
   <data name="TabItemItemTool" xml:space="preserve">
     <value>道具</value>

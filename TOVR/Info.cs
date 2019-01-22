@@ -6,8 +6,12 @@ namespace TOVR
 	class Info
 	{
 		private static Info mThis;
-		public List<NameValueInfo> Items { get; private set; } = new List<NameValueInfo>();
+		public List<NameValueInfo> Tools { get; private set; } = new List<NameValueInfo>();
 		public List<NameValueInfo> Mains { get; private set; } = new List<NameValueInfo>();
+		public List<NameValueInfo> Subs { get; private set; } = new List<NameValueInfo>();
+		public List<NameValueInfo> Heads { get; private set; } = new List<NameValueInfo>();
+		public List<NameValueInfo> Bodys { get; private set; } = new List<NameValueInfo>();
+		public List<NameValueInfo> Accessorys { get; private set; } = new List<NameValueInfo>();
 		public List<NameValueInfo> Member { get; private set; } = new List<NameValueInfo>();
 
 		private Info() { }
@@ -39,8 +43,12 @@ namespace TOVR
 
 		private void Init()
 		{
-			AppendList("info\\item.txt", Items);
+			AppendList("info\\tool.txt", Tools);
 			AppendList("info\\main.txt", Mains);
+			AppendList("info\\sub.txt", Subs);
+			AppendList("info\\head.txt", Heads);
+			AppendList("info\\body.txt", Bodys);
+			AppendList("info\\accessory.txt", Accessorys);
 			AppendList("info\\member.txt", Member);
 
 			Mains.Sort();

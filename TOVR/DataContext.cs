@@ -13,8 +13,12 @@ namespace TOVR
 		public Info Info { get; set; } = Info.Instance();
 
 		public ObservableCollection<Charactor> Charactors { get; set; } = new ObservableCollection<Charactor>();
-		public ObservableCollection<Item> Items { get; set; } = new ObservableCollection<Item>();
+		public ObservableCollection<Item> Tools { get; set; } = new ObservableCollection<Item>();
 		public ObservableCollection<Item> Mains { get; set; } = new ObservableCollection<Item>();
+		public ObservableCollection<Item> Subs { get; set; } = new ObservableCollection<Item>();
+		public ObservableCollection<Item> Heads { get; set; } = new ObservableCollection<Item>();
+		public ObservableCollection<Item> Bodys { get; set; } = new ObservableCollection<Item>();
+		public ObservableCollection<Item> Accessorys { get; set; } = new ObservableCollection<Item>();
 		public ObservableCollection<SaveDataValue<uint>> Party { get; set; } = new ObservableCollection<SaveDataValue<uint>>();
 
 		public SaveDataValue<long> GALD { get; set; } = new SaveDataValue<long>(0xA3D60, 4, 0, 999999999);
@@ -27,8 +31,12 @@ namespace TOVR
 		public void Init()
 		{
 			Charactors.Clear();
-			Items.Clear();
+			Tools.Clear();
 			Mains.Clear();
+			Subs.Clear();
+			Heads.Clear();
+			Bodys.Clear();
+			Accessorys.Clear();
 			Party.Clear();
 
 			foreach (var chara in Info.Instance().Member)
@@ -37,13 +45,29 @@ namespace TOVR
 				Charactors.Add(new Charactor((chara.Value - 1) * 0x4010 + 0xA8750) { Name = chara.Name });
 			}
 
-			foreach (var info in Info.Instance().Items)
+			foreach (var info in Info.Instance().Tools)
 			{
-				Items.Add(new Item(info, 0xA3D68));
+				Tools.Add(new Item(info, 0xA3D68));
 			}
 			foreach (var info in Info.Instance().Mains)
 			{
 				Mains.Add(new Item(info, 0xA3D68));
+			}
+			foreach (var info in Info.Instance().Subs)
+			{
+				Subs.Add(new Item(info, 0xA3D68));
+			}
+			foreach (var info in Info.Instance().Heads)
+			{
+				Heads.Add(new Item(info, 0xA3D68));
+			}
+			foreach (var info in Info.Instance().Bodys)
+			{
+				Bodys.Add(new Item(info, 0xA3D68));
+			}
+			foreach (var info in Info.Instance().Accessorys)
+			{
+				Accessorys.Add(new Item(info, 0xA3D68));
 			}
 
 			for (uint i = 0; i < 9; i++)
