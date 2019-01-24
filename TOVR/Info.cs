@@ -11,6 +11,8 @@ namespace TOVR
 		public List<NameValueInfo> Subs { get; private set; } = new List<NameValueInfo>();
 		public List<NameValueInfo> Heads { get; private set; } = new List<NameValueInfo>();
 		public List<NameValueInfo> Bodys { get; private set; } = new List<NameValueInfo>();
+		public List<NameValueInfo> Materials { get; private set; } = new List<NameValueInfo>();
+		public List<NameValueInfo> Synthesises { get; private set; } = new List<NameValueInfo>();
 		public List<NameValueInfo> Accessorys { get; private set; } = new List<NameValueInfo>();
 		public List<NameValueInfo> Member { get; private set; } = new List<NameValueInfo>();
 
@@ -49,9 +51,17 @@ namespace TOVR
 			AppendList("info\\head.txt", Heads);
 			AppendList("info\\body.txt", Bodys);
 			AppendList("info\\accessory.txt", Accessorys);
+			AppendList("info\\material.txt", Materials);
+			AppendList("info\\synthesis.txt", Synthesises);
 			AppendList("info\\member.txt", Member);
 
 			Mains.Sort();
+			Subs.Sort();
+			Heads.Sort();
+			Bodys.Sort();
+			Accessorys.Sort();
+			Materials.Sort();
+			Synthesises.Sort();
 		}
 
 		private void AppendList<Type>(String filename, List<Type> items)

@@ -180,8 +180,14 @@
   <data name="TabItemItemMain" xml:space="preserve">
     <value>Main</value>
   </data>
+  <data name="TabItemItemMaterial" xml:space="preserve">
+    <value>Material</value>
+  </data>
   <data name="TabItemItemSub" xml:space="preserve">
     <value>Sub</value>
+  </data>
+  <data name="TabItemItemSynthesis" xml:space="preserve">
+    <value>Synthesis</value>
   </data>
   <data name="TabItemItemTool" xml:space="preserve">
     <value>Tool</value>

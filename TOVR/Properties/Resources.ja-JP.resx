@@ -180,8 +180,14 @@
   <data name="TabItemItemMain" xml:space="preserve">
     <value>メイン</value>
   </data>
+  <data name="TabItemItemMaterial" xml:space="preserve">
+    <value>素材</value>
+  </data>
   <data name="TabItemItemSub" xml:space="preserve">
     <value>サブ</value>
+  </data>
+  <data name="TabItemItemSynthesis" xml:space="preserve">
+    <value>合成</value>
   </data>
   <data name="TabItemItemTool" xml:space="preserve">
     <value>道具</value>

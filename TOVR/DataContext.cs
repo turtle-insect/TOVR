@@ -19,6 +19,8 @@ namespace TOVR
 		public ObservableCollection<Item> Heads { get; set; } = new ObservableCollection<Item>();
 		public ObservableCollection<Item> Bodys { get; set; } = new ObservableCollection<Item>();
 		public ObservableCollection<Item> Accessorys { get; set; } = new ObservableCollection<Item>();
+		public ObservableCollection<Item> Materials { get; set; } = new ObservableCollection<Item>();
+		public ObservableCollection<Item> Synthesises { get; set; } = new ObservableCollection<Item>();
 		public ObservableCollection<SaveDataValue<uint>> Party { get; set; } = new ObservableCollection<SaveDataValue<uint>>();
 
 		public SaveDataValue<long> GALD { get; set; } = new SaveDataValue<long>(0xA3D60, 4, 0, 999999999);
@@ -37,6 +39,8 @@ namespace TOVR
 			Heads.Clear();
 			Bodys.Clear();
 			Accessorys.Clear();
+			Materials.Clear();
+			Synthesises.Clear();
 			Party.Clear();
 
 			foreach (var chara in Info.Instance().Member)
@@ -68,6 +72,14 @@ namespace TOVR
 			foreach (var info in Info.Instance().Accessorys)
 			{
 				Accessorys.Add(new Item(info, 0xA3D68));
+			}
+			foreach (var info in Info.Instance().Materials)
+			{
+				Materials.Add(new Item(info, 0xA3D68));
+			}
+			foreach (var info in Info.Instance().Synthesises)
+			{
+				Synthesises.Add(new Item(info, 0xA3D68));
 			}
 
 			for (uint i = 0; i < 9; i++)

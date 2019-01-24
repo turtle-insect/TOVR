@@ -250,11 +250,29 @@ namespace TOVR.Properties {
         }
         
         /// <summary>
+        ///   Material に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string TabItemItemMaterial {
+            get {
+                return ResourceManager.GetString("TabItemItemMaterial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sub に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string TabItemItemSub {
             get {
                 return ResourceManager.GetString("TabItemItemSub", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Synthesis に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string TabItemItemSynthesis {
+            get {
+                return ResourceManager.GetString("TabItemItemSynthesis", resourceCulture);
             }
         }
         

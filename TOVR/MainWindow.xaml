@@ -243,6 +243,32 @@
                                 </ListBox.ItemTemplate>
                             </ListBox>
                         </TabItem>
+                        <TabItem Header="{x:Static properties:Resources.TabItemItemMaterial}">
+                            <ListBox ItemsSource="{Binding Materials}">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Label Content="Count :"/>
+                                            <TextBox Text="{Binding Count, UpdateSourceTrigger=PropertyChanged}" Width="30"/>
+                                            <Label Content="{Binding Name}" Margin="3"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </TabItem>
+                        <TabItem Header="{x:Static properties:Resources.TabItemItemSynthesis}">
+                            <ListBox ItemsSource="{Binding Synthesises}">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Label Content="Count :"/>
+                                            <TextBox Text="{Binding Count, UpdateSourceTrigger=PropertyChanged}" Width="30"/>
+                                            <Label Content="{Binding Name}" Margin="3"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </TabItem>
                     </TabControl>
                 </TabItem>
                 <TabItem Header="{x:Static properties:Resources.TabItemParty}">
