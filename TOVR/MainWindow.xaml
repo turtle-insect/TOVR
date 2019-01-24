@@ -66,6 +66,7 @@
                         <Label Grid.Row="3" Content="GALD"/>
                         <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding GALD.Value, UpdateSourceTrigger=PropertyChanged}"/>
                         <Label Grid.Row="4" Content="GRADE"/>
+                        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding GRADE, UpdateSourceTrigger=PropertyChanged}"/>
                         <Label Grid.Row="5" Content="Max GALD"/>
                         <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding MaxGALD.Value, UpdateSourceTrigger=PropertyChanged}"/>
                         <Label Grid.Row="6" Content="Use GALD"/>
@@ -159,6 +160,15 @@
                                               SelectedIndex="{Binding ElementName=ListBoxParty, Path=SelectedItem.EquipmentMain, 
                                         Converter={StaticResource EquipmentConverter}, ConverterParameter=Main}"/>
                                 </Grid>
+                            </TabItem>
+                            <TabItem Header="{x:Static properties:Resources.TabItemCharactorSkill}">
+                                <ListBox ItemsSource="{Binding ElementName=ListBoxParty, Path=SelectedItem.Skills}">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <CheckBox Content="{Binding Name}" IsChecked="{Binding Enable}"/>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
                             </TabItem>
                         </TabControl>
                     </Grid>

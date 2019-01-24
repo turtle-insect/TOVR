@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using System.Collections.ObjectModel;
 
 namespace TOVR
 {
@@ -12,7 +13,14 @@ namespace TOVR
 		public Charactor(uint address)
 		{
 			mAddress = address;
+
+			foreach (var info in Info.Instance().Skill)
+			{
+				Skills.Add(new Skill(info, address));
+			}
 		}
+
+		public ObservableCollection<Skill> Skills { get; set; } = new ObservableCollection<Skill>();
 
 		public String Name { get; set; }
 

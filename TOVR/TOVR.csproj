@@ -62,6 +62,7 @@
     <Compile Include="DataContext.cs" />
     <Compile Include="EquipmentConverter.cs" />
     <Compile Include="FileFormatPC.cs" />
+    <Compile Include="FileFormatPS4.cs" />
     <Compile Include="FileFormatRaw.cs" />
     <Compile Include="FileFormatSwitch.cs" />
     <Compile Include="IFileFormat.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="NameValueInfo.cs" />
     <Compile Include="SaveData.cs" />
     <Compile Include="SaveDataValue.cs" />
+    <Compile Include="Skill.cs" />
     <Compile Include="Util.cs" />
     <Page Include="AboutWindow.xaml">
       <SubType>Designer</SubType>

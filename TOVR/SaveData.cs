@@ -62,6 +62,17 @@ namespace TOVR
 			}
 			if (check) mFormat = new FileFormatPC();
 
+			check = true;
+			for (int i = 0; i < header.Length; i++)
+			{
+				if (buffer[i + 0x308] != header[i])
+				{
+					check = false;
+					break;
+				}
+			}
+			if (check) mFormat = new FileFormatPS4();
+
 			if (mFormat == null) return false;
 
 			mBuffer = mFormat.Load(filename);
@@ -107,6 +118,19 @@ namespace TOVR
 			for(int i = 0; i < size; i++)
 			{
 				result += (uint)(mBuffer[address + i]) << (i * 8);
+			}
+			return result;
+		}
+
+		public Byte[] ReadValue(uint address, uint size)
+		{
+			Byte[] result = new Byte[size];
+			if (mBuffer == null) return result;
+			address = CalcAddress(address);
+			if (address + size > mBuffer.Length) return result;
+			for (int i = 0; i < size; i++)
+			{
+				result[i] = mBuffer[address + i];
 			}
 			return result;
 		}

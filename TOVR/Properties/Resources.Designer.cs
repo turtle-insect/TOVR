@@ -205,6 +205,15 @@ namespace TOVR.Properties {
         }
         
         /// <summary>
+        ///   Skill に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string TabItemCharactorSkill {
+            get {
+                return ResourceManager.GetString("TabItemCharactorSkill", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Item に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string TabItemItem {
