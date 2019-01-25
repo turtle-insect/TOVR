@@ -13,27 +13,12 @@ namespace TOVR
 		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
 		{
 			var list = GetList(parameter);
-
-			int index = -1;
-			if (list != null)
-			{
-				for (int i = 0; i < list.Count; i++)
-				{
-					if (list[i].Value == (uint)value)
-					{
-						index = i;
-						break;
-					}
-				}
-			}
-
-			return index;
+			return Info.Instance().Search(list, (uint)value)?.Name;
 		}
 
 		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
 		{
-			var list = GetList(parameter);
-			return list[(int)value].Value;
+			throw new NotImplementedException();
 		}
 
 		private List<NameValueInfo> GetList(object obj)

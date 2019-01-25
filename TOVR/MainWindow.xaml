@@ -152,13 +152,23 @@
                                         <RowDefinition Height="9*"/>
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="65"/>
                                         <ColumnDefinition/>
+                                        <ColumnDefinition Width="20"/>
                                     </Grid.ColumnDefinitions>
                                     <Label Content="Main"/>
-                                    <ComboBox Grid.Column="1" ItemsSource="{Binding Info.Mains}" DisplayMemberPath="Name"
-                                              SelectedIndex="{Binding ElementName=ListBoxParty, Path=SelectedItem.EquipmentMain, 
+                                    <Label Grid.Column="1" Content="{Binding ElementName=ListBoxParty, Path=SelectedItem.EquipmentMain,
                                         Converter={StaticResource EquipmentConverter}, ConverterParameter=Main}"/>
+                                    <Label Grid.Row="1" Content="Sub"/>
+                                    <Label Grid.Row="1" Grid.Column="1" Content="{Binding ElementName=ListBoxParty, Path=SelectedItem.EquipmentSub,
+                                        Converter={StaticResource EquipmentConverter}, ConverterParameter=Sub}"/>
+                                    <Label Grid.Row="2" Content="Head"/>
+                                    <Label Grid.Row="2" Grid.Column="1" Content="{Binding ElementName=ListBoxParty, Path=SelectedItem.EquipmentHead,
+                                        Converter={StaticResource EquipmentConverter}, ConverterParameter=Head}"/>
+                                    <Label Grid.Row="3" Content="Body"/>
+                                    <Label Grid.Row="3" Grid.Column="1" Content="{Binding ElementName=ListBoxParty, Path=SelectedItem.EquipmentBody,
+                                        Converter={StaticResource EquipmentConverter}, ConverterParameter=Body}"/>
+                                    <Label Grid.Row="4" Content="Accessory"/>
                                 </Grid>
                             </TabItem>
                             <TabItem Header="{x:Static properties:Resources.TabItemCharactorSkill}">
@@ -169,6 +179,8 @@
                                         </DataTemplate>
                                     </ListBox.ItemTemplate>
                                 </ListBox>
+                            </TabItem>
+                            <TabItem Header="{x:Static properties:Resources.TabItemCharactorTitle}">
                             </TabItem>
                         </TabControl>
                     </Grid>

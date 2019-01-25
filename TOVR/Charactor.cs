@@ -114,6 +114,24 @@ namespace TOVR
 			set { SaveData.Instance().WriteNumber(mAddress + 9368, 4, value); }
 		}
 
+		public uint EquipmentSub
+		{
+			get { return SaveData.Instance().ReadNumber(mAddress + 9372, 4); }
+			set { SaveData.Instance().WriteNumber(mAddress + 9372, 4, value); }
+		}
+
+		public uint EquipmentBody
+		{
+			get { return SaveData.Instance().ReadNumber(mAddress + 9376, 4); }
+			set { SaveData.Instance().WriteNumber(mAddress + 9376, 4, value); }
+		}
+
+		public uint EquipmentHead
+		{
+			get { return SaveData.Instance().ReadNumber(mAddress + 9380, 4); }
+			set { SaveData.Instance().WriteNumber(mAddress + 9380, 4, value); }
+		}
+
 		private readonly uint mAddress;
 	}
 }

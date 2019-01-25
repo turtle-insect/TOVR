@@ -214,6 +214,15 @@ namespace TOVR.Properties {
         }
         
         /// <summary>
+        ///   Title に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string TabItemCharactorTitle {
+            get {
+                return ResourceManager.GetString("TabItemCharactorTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Item に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string TabItemItem {

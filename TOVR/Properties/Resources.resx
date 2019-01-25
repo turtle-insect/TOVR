@@ -168,6 +168,9 @@
   <data name="TabItemCharactorSkill" xml:space="preserve">
     <value>Skill</value>
   </data>
+  <data name="TabItemCharactorTitle" xml:space="preserve">
+    <value>Title</value>
+  </data>
   <data name="TabItemItem" xml:space="preserve">
     <value>Item</value>
   </data>

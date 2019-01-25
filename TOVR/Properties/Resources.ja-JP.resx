@@ -168,6 +168,9 @@
   <data name="TabItemCharactorSkill" xml:space="preserve">
     <value>スキル</value>
   </data>
+  <data name="TabItemCharactorTitle" xml:space="preserve">
+    <value>称号</value>
+  </data>
   <data name="TabItemItem" xml:space="preserve">
     <value>アイテム</value>
   </data>
