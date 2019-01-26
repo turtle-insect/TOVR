@@ -181,6 +181,13 @@
                                 </ListBox>
                             </TabItem>
                             <TabItem Header="{x:Static properties:Resources.TabItemCharactorTitle}">
+                                <ListBox ItemsSource="{Binding ElementName=ListBoxParty, Path=SelectedItem.Titles}">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <CheckBox Content="{Binding Name}" IsChecked="{Binding Enable}"/>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
                             </TabItem>
                         </TabControl>
                     </Grid>

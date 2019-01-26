@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace TOVR
 {
-    class Skill
+    class Title
     {
-		public Skill(NameValueInfo Info, uint address)
+		public Title(NameValueInfo Info, uint address)
 		{
 			mInfo = Info;
 			mAddress = address;
@@ -21,11 +21,11 @@ namespace TOVR
 
 		public bool Enable
 		{
-			get { return SaveData.Instance().ReadBit(mAddress + 9672 + mInfo.Value / 8, mInfo.Value % 8); }
-			set { SaveData.Instance().WriteBit(mAddress + 9672 + mInfo.Value / 8, mInfo.Value % 8, value); }
+			get { return SaveData.Instance().ReadBit(mAddress + 15437 + mInfo.Value / 8, mInfo.Value % 8); }
+			set { SaveData.Instance().WriteBit(mAddress + 15437 + mInfo.Value / 8, mInfo.Value % 8, value); }
 		}
 
 		private readonly NameValueInfo mInfo;
 		private readonly uint mAddress;
-    }
+	}
 }

@@ -16,6 +16,7 @@ namespace TOVR
 		public List<NameValueInfo> Accessorys { get; private set; } = new List<NameValueInfo>();
 		public List<NameValueInfo> Member { get; private set; } = new List<NameValueInfo>();
 		public List<NameValueInfo> Skill { get; private set; } = new List<NameValueInfo>();
+		public List<NameValueInfo> Title { get; private set; } = new List<NameValueInfo>();
 
 		private Info() { }
 
@@ -56,6 +57,7 @@ namespace TOVR
 			AppendList("info\\synthesis.txt", Synthesises);
 			AppendList("info\\member.txt", Member);
 			AppendList("info\\skill.txt", Skill);
+			AppendList("info\\title.txt", Title);
 
 			Mains.Sort();
 			Subs.Sort();

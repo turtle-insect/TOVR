@@ -18,9 +18,14 @@ namespace TOVR
 			{
 				Skills.Add(new Skill(info, address));
 			}
+			foreach (var info in Info.Instance().Title)
+			{
+				Titles.Add(new Title(info, address));
+			}
 		}
 
 		public ObservableCollection<Skill> Skills { get; set; } = new ObservableCollection<Skill>();
+		public ObservableCollection<Title> Titles { get; set; } = new ObservableCollection<Title>();
 
 		public String Name { get; set; }
 
