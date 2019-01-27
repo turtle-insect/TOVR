@@ -14,5 +14,34 @@ namespace TOVR
 			if (value > max) value = max;
 			SaveData.Instance().WriteNumber(address, size, (uint)value);
 		}
+
+		public static List<NameValueInfo> GetItemList(String type)
+		{
+			List<NameValueInfo> list = null;
+			switch (type)
+			{
+				case "Main":
+					list = Info.Instance().Mains;
+					break;
+
+				case "Sub":
+					list = Info.Instance().Subs;
+					break;
+
+				case "Head":
+					list = Info.Instance().Heads;
+					break;
+
+				case "Body":
+					list = Info.Instance().Bodys;
+					break;
+
+				case "Accessory":
+					list = Info.Instance().Accessorys;
+					break;
+			}
+
+			return list;
+		}
 	}
 }

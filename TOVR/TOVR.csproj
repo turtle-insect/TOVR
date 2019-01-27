@@ -59,6 +59,7 @@
       <DependentUpon>AboutWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Charactor.cs" />
+    <Compile Include="CommandItemChoice.cs" />
     <Compile Include="DataContext.cs" />
     <Compile Include="EquipmentConverter.cs" />
     <Compile Include="FileFormatPC.cs" />
@@ -69,6 +70,10 @@
     <Compile Include="ILineAnalysis.cs" />
     <Compile Include="Info.cs" />
     <Compile Include="Item.cs" />
+    <Compile Include="ItemChoiceConverter.cs" />
+    <Compile Include="ItemChoiceWindow.xaml.cs">
+      <DependentUpon>ItemChoiceWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="NameValueInfo.cs" />
     <Compile Include="SaveData.cs" />
     <Compile Include="SaveDataValue.cs" />
@@ -76,6 +81,10 @@
     <Compile Include="Title.cs" />
     <Compile Include="Util.cs" />
     <Page Include="AboutWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ItemChoiceWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

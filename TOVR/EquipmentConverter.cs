@@ -12,42 +12,13 @@ namespace TOVR
 	{
 		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
 		{
-			var list = GetList(parameter);
+			var list = Util.GetItemList(parameter.ToString());
 			return Info.Instance().Search(list, (uint)value)?.Name;
 		}
 
 		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
 		{
 			throw new NotImplementedException();
-		}
-
-		private List<NameValueInfo> GetList(object obj)
-		{
-			List<NameValueInfo> list = null;
-			switch (obj.ToString())
-			{
-				case "Main":
-					list = Info.Instance().Mains;
-					break;
-
-				case "Sub":
-					list = Info.Instance().Subs;
-					break;
-
-				case "Head":
-					list = Info.Instance().Heads;
-					break;
-
-				case "Body":
-					list = Info.Instance().Bodys;
-					break;
-
-				case "Accessory":
-					list = Info.Instance().Accessorys;
-					break;
-			}
-
-			return list;
 		}
 	}
 }

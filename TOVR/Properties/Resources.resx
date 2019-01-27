@@ -117,6 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ItemChoiceCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ItemChoiceFilter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="ItemChoiceOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ItemChoiceTitle" xml:space="preserve">
+    <value>Choice</value>
+  </data>
   <data name="MainWindowTitle" xml:space="preserve">
     <value>Tales of Vesperia: Definitive Edition SaveEditor(Nintendo Switch)</value>
   </data>

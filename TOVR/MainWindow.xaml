@@ -142,6 +142,8 @@
                                 <Grid>
                                     <Grid.Resources>
                                         <local:EquipmentConverter x:Key="EquipmentConverter"/>
+                                        <local:CommandItemChoice x:Key="CommandItemChoice"/>
+                                        <local:ItemChoiceConverter x:Key="ItemChoiceConverter"/>
                                     </Grid.Resources>
                                     <Grid.RowDefinitions>
                                         <RowDefinition/>
@@ -154,20 +156,56 @@
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="65"/>
                                         <ColumnDefinition/>
-                                        <ColumnDefinition Width="20"/>
+                                        <ColumnDefinition Width="15"/>
                                     </Grid.ColumnDefinitions>
                                     <Label Content="Main"/>
                                     <Label Grid.Column="1" Content="{Binding ElementName=ListBoxParty, Path=SelectedItem.EquipmentMain,
                                         Converter={StaticResource EquipmentConverter}, ConverterParameter=Main}"/>
+                                    <Button Grid.Column="2" Content="..." Command="{StaticResource CommandItemChoice}">
+                                        <Button.CommandParameter>
+                                            <MultiBinding Converter="{StaticResource ItemChoiceConverter}">
+                                                <Binding ElementName="ListBoxParty" Path="SelectedItem"/>
+                                                <Binding ElementName="ListBoxParty" Path="SelectedItem.EquipmentMain"/>
+                                                <Binding Source="Main"/>
+                                            </MultiBinding>
+                                        </Button.CommandParameter>
+                                    </Button>
                                     <Label Grid.Row="1" Content="Sub"/>
                                     <Label Grid.Row="1" Grid.Column="1" Content="{Binding ElementName=ListBoxParty, Path=SelectedItem.EquipmentSub,
                                         Converter={StaticResource EquipmentConverter}, ConverterParameter=Sub}"/>
+                                    <Button Grid.Row="1" Grid.Column="2" Content="..." Command="{StaticResource CommandItemChoice}">
+                                        <Button.CommandParameter>
+                                            <MultiBinding Converter="{StaticResource ItemChoiceConverter}">
+                                                <Binding ElementName="ListBoxParty" Path="SelectedItem"/>
+                                                <Binding ElementName="ListBoxParty" Path="SelectedItem.EquipmentSub"/>
+                                                <Binding Source="Sub"/>
+                                            </MultiBinding>
+                                        </Button.CommandParameter>
+                                    </Button>
                                     <Label Grid.Row="2" Content="Head"/>
                                     <Label Grid.Row="2" Grid.Column="1" Content="{Binding ElementName=ListBoxParty, Path=SelectedItem.EquipmentHead,
                                         Converter={StaticResource EquipmentConverter}, ConverterParameter=Head}"/>
+                                    <Button Grid.Row="2" Grid.Column="2" Content="..." Command="{StaticResource CommandItemChoice}">
+                                        <Button.CommandParameter>
+                                            <MultiBinding Converter="{StaticResource ItemChoiceConverter}">
+                                                <Binding ElementName="ListBoxParty" Path="SelectedItem"/>
+                                                <Binding ElementName="ListBoxParty" Path="SelectedItem.EquipmentHead"/>
+                                                <Binding Source="Head"/>
+                                            </MultiBinding>
+                                        </Button.CommandParameter>
+                                    </Button>
                                     <Label Grid.Row="3" Content="Body"/>
                                     <Label Grid.Row="3" Grid.Column="1" Content="{Binding ElementName=ListBoxParty, Path=SelectedItem.EquipmentBody,
                                         Converter={StaticResource EquipmentConverter}, ConverterParameter=Body}"/>
+                                    <Button Grid.Row="3" Grid.Column="2" Content="..." Command="{StaticResource CommandItemChoice}">
+                                        <Button.CommandParameter>
+                                            <MultiBinding Converter="{StaticResource ItemChoiceConverter}">
+                                                <Binding ElementName="ListBoxParty" Path="SelectedItem"/>
+                                                <Binding ElementName="ListBoxParty" Path="SelectedItem.EquipmentBody"/>
+                                                <Binding Source="Body"/>
+                                            </MultiBinding>
+                                        </Button.CommandParameter>
+                                    </Button>
                                     <Label Grid.Row="4" Content="Accessory"/>
                                 </Grid>
                             </TabItem>

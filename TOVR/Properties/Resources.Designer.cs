@@ -61,6 +61,42 @@ namespace TOVR.Properties {
         }
         
         /// <summary>
+        ///   Cancel に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ItemChoiceCancel {
+            get {
+                return ResourceManager.GetString("ItemChoiceCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Filter に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ItemChoiceFilter {
+            get {
+                return ResourceManager.GetString("ItemChoiceFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   OK に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ItemChoiceOK {
+            get {
+                return ResourceManager.GetString("ItemChoiceOK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Choice に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ItemChoiceTitle {
+            get {
+                return ResourceManager.GetString("ItemChoiceTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Tales of Vesperia: Definitive Edition SaveEditor(Nintendo Switch) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string MainWindowTitle {

@@ -8,7 +8,7 @@ using System.Collections.ObjectModel;
 
 namespace TOVR
 {
-	class Charactor
+	class Charactor : INotifyPropertyChanged
 	{
 		public Charactor(uint address)
 		{
@@ -116,27 +116,45 @@ namespace TOVR
 		public uint EquipmentMain
 		{
 			get { return SaveData.Instance().ReadNumber(mAddress + 9368, 4); }
-			set { SaveData.Instance().WriteNumber(mAddress + 9368, 4, value); }
+			set
+			{
+				SaveData.Instance().WriteNumber(mAddress + 9368, 4, value);
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(EquipmentMain)));
+			}
 		}
 
 		public uint EquipmentSub
 		{
 			get { return SaveData.Instance().ReadNumber(mAddress + 9372, 4); }
-			set { SaveData.Instance().WriteNumber(mAddress + 9372, 4, value); }
+			set
+			{
+				SaveData.Instance().WriteNumber(mAddress + 9372, 4, value);
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(EquipmentSub)));
+			}
 		}
 
 		public uint EquipmentBody
 		{
 			get { return SaveData.Instance().ReadNumber(mAddress + 9376, 4); }
-			set { SaveData.Instance().WriteNumber(mAddress + 9376, 4, value); }
+			set
+			{
+				SaveData.Instance().WriteNumber(mAddress + 9376, 4, value);
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(EquipmentBody)));
+			}
 		}
 
 		public uint EquipmentHead
 		{
 			get { return SaveData.Instance().ReadNumber(mAddress + 9380, 4); }
-			set { SaveData.Instance().WriteNumber(mAddress + 9380, 4, value); }
+			set
+			{
+				SaveData.Instance().WriteNumber(mAddress + 9380, 4, value);
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(EquipmentHead)));
+			}
 		}
 
 		private readonly uint mAddress;
+
+		public event PropertyChangedEventHandler PropertyChanged;
 	}
 }
