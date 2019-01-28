@@ -109,7 +109,7 @@ namespace TOVR
 				return;
 			}
 
-			(DataContext as DataContext)?.Init();
+			DataContext = new DataContext();
 			MessageBox.Show(Properties.Resources.MessageLoadSuccess);
 		}
 

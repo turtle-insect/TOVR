@@ -28,20 +28,13 @@ namespace TOVR
 		public SaveDataValue<long> SaveCount { get; set; } = new SaveDataValue<long>(0xA778C, 4, 0, 999999999);
 		public SaveDataValue<long> EncountCount { get; set; } = new SaveDataValue<long>(0xA7780, 4, 0, 999999999);
 		public SaveDataValue<long> KillCount { get; set; } = new SaveDataValue<long>(0xA779C, 4, 0, 999999999);
+		public SaveDataValue<long> MaxHitCount { get; set; } = new SaveDataValue<long>(0xA77B0, 4, 0, 999999999);
+		public SaveDataValue<long> MaxDamage { get; set; } = new SaveDataValue<long>(0xA77A8, 4, 0, 999999999);
+		public SaveDataValue<long> TotalDamage { get; set; } = new SaveDataValue<long>(0xA77B8, 4, 0, 999999999);
+		public SaveDataValue<long> ReceivedDamage { get; set; } = new SaveDataValue<long>(0xA77B4, 4, 0, 999999999);
 
-		public void Init()
+		public DataContext()
 		{
-			Charactors.Clear();
-			Tools.Clear();
-			Mains.Clear();
-			Subs.Clear();
-			Heads.Clear();
-			Bodys.Clear();
-			Accessorys.Clear();
-			Materials.Clear();
-			Synthesises.Clear();
-			Party.Clear();
-
 			foreach (var chara in Info.Instance().Member)
 			{
 				if (chara.Value == 0) continue;
@@ -85,13 +78,6 @@ namespace TOVR
 			{
 				Party.Add(new SaveDataValue<uint>(0xA3D38 + 4 * i, 4, 0, 9));
 			}
-
-			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(GALD)));
-			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(MaxGALD)));
-			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(GRADE)));
-			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SaveCount)));
-			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(EncountCount)));
-			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(KillCount)));
 		}
 
 		public float GRADE
