@@ -30,3 +30,8 @@ Switch テイルズ オブ ヴェスペリア REMASTERのセーブデータ編�
 * 任意の編集を行う
 * TLSaveData0-00(他)を書き出す
 * saveDataを書き戻す
+
+# special Thanks
+* [TALESIOFIFREAK](https://gbatemp.net/members/talesiofifreak.400404/)
+* [Delerious](https://gbatemp.net/members/delerious.448353/)
+* [zestiva](https://gbatemp.net/members/zestiva.470015/)
