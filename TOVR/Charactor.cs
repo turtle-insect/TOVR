@@ -113,6 +113,12 @@ namespace TOVR
 			set { Util.WriteNumber(mAddress + 9404, 4, value, 0, 500); }
 		}
 
+       		public uint FellArms
+        	{
+            		get { return SaveData.Instance().ReadNumber(mAddress + 16116, 4);  }
+            		set { Util.WriteNumber(mAddress + 16116, 4, value, 0, 9999); }
+        	}
+
 		public uint EquipmentMain
 		{
 			get { return SaveData.Instance().ReadNumber(mAddress + 9368, 4); }
