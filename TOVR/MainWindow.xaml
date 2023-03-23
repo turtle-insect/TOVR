@@ -88,8 +88,6 @@
                         <TextBox Grid.Row="12" Grid.Column="1" Text="{Binding TotalDamage.Value, UpdateSourceTrigger=PropertyChanged}"/>
                         <Label Grid.Row="13" Content="Received Damage"/>
                         <TextBox Grid.Row="13" Grid.Column="1" Text="{Binding ReceivedDamage.Value, UpdateSourceTrigger=PropertyChanged}"/>
-                        <Label Grid.Row="14" Content="Fell Arms"/>
-                        <TextBox Grid.Row="14" Grid.Column="1" Text="{Binding ElementName=ListBoxParty, Path=SelectedItem.FellArms, UpdateSourceTrigger=PropertyChanged}"/>
                     </Grid>
                 </TabItem>
                 <TabItem Header="{x:Static properties:Resources.TabItemCharactor}">
@@ -150,6 +148,8 @@
                             <TextBox Grid.Row="12" Grid.Column="1" Text="{Binding ElementName=ListBoxParty, Path=SelectedItem.Speed, UpdateSourceTrigger=PropertyChanged}"/>
                             <Label Grid.Row="13" Content="幸運"/>
                             <TextBox Grid.Row="13" Grid.Column="1" Text="{Binding ElementName=ListBoxParty, Path=SelectedItem.Lucky, UpdateSourceTrigger=PropertyChanged}"/>
+                            <Label Grid.Row="14" Content="魔装具"/>
+                            <TextBox Grid.Row="14" Grid.Column="1" Text="{Binding ElementName=ListBoxParty, Path=SelectedItem.FellArms, UpdateSourceTrigger=PropertyChanged}"/>
                         </Grid>
                         <TabControl Grid.Column="2">
                             <TabItem Header="{x:Static properties:Resources.TabItemCharactorEquipment}">
